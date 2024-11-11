@@ -17,7 +17,7 @@ const Faq = () => {
           // desc={t("sections.questions.paragraph")}
         />
         <div className=" relative z-2   ">
-          <div className=" flex gap-10 max-lg:block">
+          <div className="container flex gap-10 max-lg:block p-0 m-0 ">
         
             <div className="relative flex-1 pt-10">
               {sections_features.questions.slice(0, halfLength).map((item, index) => (
