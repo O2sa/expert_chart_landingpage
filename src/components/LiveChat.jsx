@@ -36,9 +36,7 @@ export const ChatWidgetController = (() => {
     script.setAttribute("crossorigin", "*");
     document.body.appendChild(script);
     // window.Tawk_API.start({ showWidget: true });
-    if (window.Tawk_API) {
-      window.Tawk_API.start({ showWidget: true });
-    }
+ 
 
 
     // window.Tawk_API.onLoad = () => {
