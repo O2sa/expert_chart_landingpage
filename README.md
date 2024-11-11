@@ -7,7 +7,7 @@ This the guides step by step to run the ChartExpert website.
 1.  **Node.js and npm (or yarn)**
 
 ----
-\
+
  **Open a terminal or command prompt and navigate to the root directory of the project using `cd`**
 
 
