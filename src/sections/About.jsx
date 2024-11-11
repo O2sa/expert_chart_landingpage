@@ -9,6 +9,9 @@ import { sections_features } from "../data/index";
 import SectionHeader from "../components/SectionHeader";
 import Section from "../components/Section";
 import { Element } from "react-scroll";
+import Testimonials from "./Testimonials";
+import { InfiniteMovingCardsAlt } from "../components/ui/infinite-moving-cards";
+import TradingView from "../components/TradingView";
 
 export default function About() {
   const { t } = useTranslation();
@@ -19,7 +22,7 @@ export default function About() {
         "Track and manage your project issues with ease using our intuitive interface.",
       skeleton: <SkeletonOne />,
       className:
-        "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
+        "col-span-1 lg:col-span-4 border-b border-e dark:border-neutral-800",
     },
     {
       title: "Capture pictures with AI",
@@ -34,42 +37,40 @@ export default function About() {
         "Whether its you or Tyler Durden, you can get to know about our product on YouTube",
       skeleton: <SkeletonThree />,
       className:
-        "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
+        "col-span-1 lg:col-span-3 border-b  border-e  dark:border-neutral-800",
     },
     {
       title: "Deploy in seconds",
       description:
         "With our blazing fast, state of the art, cutting edge, we are so back cloud servies (read AWS) - you can deploy your model in seconds.",
       skeleton: <SkeletonFour />,
-      className: "col-span-1 lg:col-span-3 border-b lg:border-none",
+      className: "col-span-1 lg:col-span-3 border-b border-none",
     },
   ];
 
   return (
-    <Element name="About" className="relative">
-
-    <Section>
-      <SectionHeader
-        title={t("sections.about.header_section_one")}
-        desc={t("sections.discover.paragraph")}
-      />
-      <div className="relative ">
-        <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800">
-          {features.map((feature, idx) => (
-            <FeatureCard
-              key={idx}
-              className={feature.className}
-            >
-              <FeatureTitle>{t(sections_features.discover[idx].header)}</FeatureTitle>
-              <FeatureDescription>
-                {t(sections_features.discover[idx].desc)}
-              </FeatureDescription>
-              <div className=" h-full w-full">{feature.skeleton}</div>
-            </FeatureCard>
-          ))}
+    <Element name="About">
+      <Section>
+        <SectionHeader
+          title={t("sections.about.header_section_one")}
+          desc={t("sections.discover.paragraph")}
+        />
+        <div className="relative ">
+          <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 border rounded-md dark:border-neutral-800">
+            {features.map((feature, idx) => (
+              <FeatureCard key={idx} className={feature.className}>
+                <FeatureTitle>
+                  {t(sections_features.discover[idx].header)}
+                </FeatureTitle>
+                <FeatureDescription>
+                  {t(sections_features.discover[idx].desc)}
+                </FeatureDescription>
+                <div className=" w-full">{feature.skeleton}</div>
+              </FeatureCard>
+            ))}
+          </div>
         </div>
-      </div>
-    </Section>
+      </Section>
     </Element>
   );
 }
@@ -111,7 +112,7 @@ export const SkeletonOne = () => {
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           {/* TODO */}
           <img
-            src="/expert.jpg"
+            src="/images/expert.jpg"
             alt="header"
             width={800}
             height={800}
@@ -127,21 +128,17 @@ export const SkeletonOne = () => {
 
 export const SkeletonThree = () => {
   return (
-    <div
-      href="https://www.youtube.com/watch?v=RPa3_AD1_Vs"
-      target="__blank"
-      className="relative flex gap-10  h-full group/image"
-    >
-      <div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full">
-        <div className="flex flex-1 w-full h-full flex-col space-y-2  relative">
+    <div className="relative flex gap-10  h-full group/image ">
+      <div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full ">
+        <div className="flex flex-1 w-full  flex-col space-y-2  relative">
           {/* TODO */}
           {/* <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " /> */}
           <img
-            src="trader.jpg"
+            src="images/trader.jpg"
             alt="header"
             width={800}
             height={800}
-            className="h-full w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
+            className=" w-full aspect-square object-cover object-center rounded-sm blur-none group-hover/image:blur-md transition-all duration-200"
           />
         </div>
       </div>
@@ -156,7 +153,6 @@ export const SkeletonTwo = () => {
     "currencies.jpg",
     "charts.jpg",
     "curen.jpg",
-
   ];
 
   const imageVariants = {
@@ -187,7 +183,7 @@ export const SkeletonTwo = () => {
             className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
           >
             <img
-              src={image}
+              src={"images/" + image}
               alt="bali images"
               width="500"
               height="500"
@@ -209,7 +205,7 @@ export const SkeletonTwo = () => {
             className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden"
           >
             <img
-              src={image}
+              src={"images/" + image}
               alt="bali images"
               width="500"
               height="500"
@@ -272,10 +268,15 @@ export const Globe = ({ className }) => {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
-      className={className}
-    />
+    <div>
+      {/* <div className="w-full relative z-10">
+        <TradingView />
+      </div> */}
+      <canvas
+        ref={canvasRef}
+        style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
+        className={className}
+      />
+    </div>
   );
 };

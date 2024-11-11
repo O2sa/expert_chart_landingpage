@@ -9,7 +9,7 @@
         },
         "company": {
             "button": "",
-            "header_section_one": "معلومات حول ",
+            "header_section_one": "معلومات حول الشركات المالية ",
             "header_section_two": "الشركات المالية",
             "paragraph": "",
             "title": " تفاصيل الشركة "
@@ -71,7 +71,7 @@
             "title": " الخيارات"
         },
         "questions": {
-            "title": " الدعم والمساعدة",
+            "title": " الدعم والمساعدة/الأسئلة",
             "header_section_one": "الأسئلة ",
             "header_section_two": " المتداولة",
             "paragraph": ""
@@ -224,8 +224,21 @@
     "Specialized Articles and Research": "المقالات والبحوث المتخصصة",
     "Stay informed with in-depth articles and studies on the latest market trends and techniques.": "ابقَ على اطلاع عبر مقالات ودراسات متعمقة حول أحدث اتجاهات السوق والتقنيات.",
     "Certified Programs": "شهادات معتمدة",
-    "Enroll in intensive programs and earn certifications that equip you to work confidently and professionally in financial markets.": "انضم إلى برامج مكثفة واحصل على شهادات تؤهلك للعمل بثقة واحترافية في الأسواق المالية."
+    "Enroll in intensive programs and earn certifications that equip you to work confidently and professionally in financial markets.": "انضم إلى برامج مكثفة واحصل على شهادات تؤهلك للعمل بثقة واحترافية في الأسواق المالية.",
+    "Name": "الأسم",
+    "Password": "كلمة السر",
+    "Google": "جوجل",
+    "Login": "تسجيل الدخول",
+    "Sign up": "إنشاء حساب",
 
-
-
+   
+    "seo": {
+        "title": "ChartXpert.io",
+        "twitterTitle": "ChartXpert.io",
+        "description": " منصة متقدمة لتحليل السوق، توفر أدوات التحليل الفني والأساسي للأسهم والعملات والسلع والعملات الرقمية. انضم إلى مجتمع نشط من المتداولين والمستثمرين واستفد من البيانات الحية لتحقيق نجاح التداول. ",
+        "ogDescription": " منصة متقدمة لتحليل السوق، توفر أدوات التحليل الفني والأساسي للأسهم والعملات والسلع والعملات الرقمية. انضم إلى مجتمع نشط من المتداولين والمستثمرين واستفد من البيانات الحية لتحقيق نجاح التداول. ",
+        "twitterDescription": " منصة متقدمة لتحليل السوق، توفر أدوات التحليل الفني والأساسي للأسهم والعملات والسلع والعملات الرقمية. انضم إلى مجتمع نشط من المتداولين والمستثمرين واستفد من البيانات الحية لتحقيق نجاح التداول. ",
+        "keywords": "تحليل مالي, عملات، الإستثمار, التداول، العملات الرقمية",
+        "ogTitle": "ChartXpert.io"
+        }
 }

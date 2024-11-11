@@ -7,14 +7,17 @@ import Login from "./pages/Login";
 import Landingpage from "./pages/landingpage";
 import Privacy from "./pages/privacy";
 import { useEffect } from "react";
-import { initializeFacebookPixel, initializeGoogleAnalytics, trackPageView } from "./utils/analtics";
+import {
+  initializeFacebookPixel,
+  initializeGoogleAnalytics,
+  trackPageView,
+} from "./utils/analtics";
+import LiveChat from "./components/LiveChat";
 
 const App = () => {
-
-
-  
   return (
     <main className="overflow-hidden">
+      <LiveChat />
       <Router>
         <Suspense fallback={<Loader />}>
           <Routes>
@@ -23,7 +26,7 @@ const App = () => {
               <Route path="/signup" element={<Signup />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Privacy />} />
-              <Route path="/login" element={<Signup />} />{" "}
+              <Route path="/login" element={<Login />} />{" "}
             </Route>
           </Routes>
         </Suspense>{" "}

@@ -1,3 +1,13 @@
+import { IconFolderDollar } from "@tabler/icons-react";
+import { IconDentalBroken } from "@tabler/icons-react";
+import { IconChartArcs } from "@tabler/icons-react";
+import { IconDivide } from "@tabler/icons-react";
+import { IconChartArrows } from "@tabler/icons-react";
+import { IconBookmarkQuestion } from "@tabler/icons-react";
+import { IconGlobeFilled } from "@tabler/icons-react";
+import { IconEyeDollar } from "@tabler/icons-react";
+import { IconBellDollar } from "@tabler/icons-react";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -36,26 +46,32 @@ export const sections_features = {
     {
       header: "Capital",
       desc: "Get information about company capital and liquidity levels.",
+      icon: IconEyeDollar,
     },
     {
       header: "Revenue",
       desc: "Analyze company revenues and evaluate financial performance.",
+      icon: IconFolderDollar,
     },
     {
       header: "Assets",
       desc: "Track company assets and understand the level of value they hold.",
+      icon: IconGlobeFilled,
     },
     {
       header: "Debt",
       desc: "Understand debt levels and financial obligations of companies.",
+      icon: IconBookmarkQuestion,
     },
     {
       header: "Growth",
       desc: "Analyze company growth and evaluate future trends.",
+      icon: IconChartArrows,
     },
     {
       header: "Dividends",
       desc: "Follow dividend distributions and financial returns for investors.",
+      icon: IconDivide,
     },
   ],
   contact: [

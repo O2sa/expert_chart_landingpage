@@ -123,25 +123,25 @@ export default function Features() {
     },
   ];
   return (
-    <Section>
-      <SectionHeader desc={t(items.description)} title={t(items.header)} />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
-        {items.items.map((feature, index) => (
-          <Feature key={index} {...feature} index={index} />
-        ))}
-      </div>
-    </Section>
+    <Element name="Academy" >
+      <Section>
+        <SectionHeader desc={t(items.description)} title={t(items.header)} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10  max-w-7xl mx-auto">
+          {items.items.map((feature, index) => (
+            <Feature key={index} {...feature} index={index} />
+          ))}
+        </div>
+      </Section>
+    </Element>
   );
 }
 
 const Feature = ({ title, description, icon, index }) => {
   const { t } = useTranslation();
   return (
-    <Element name="Academy" className="relative">
-
     <div
       className={cn(
-        "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
+        "flex flex-col border-r  py-10 relative group/feature dark:border-neutral-800",
         (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
         index < 4 && "lg:border-b dark:border-neutral-800"
       )}
@@ -165,6 +165,5 @@ const Feature = ({ title, description, icon, index }) => {
         {t(description)}
       </p>
     </div>
-    </Element>
   );
 };

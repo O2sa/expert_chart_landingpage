@@ -53,7 +53,7 @@ const Header = () => {
       spy
       smooth
       activeClass="nav-active"
-      className="base-bold text-black dark:text-white uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5"
+      className=" text-black dark:text-white uppercase transition-colors duration-500 cursor-pointer hover:text-p2 max-lg:my-4 max-lg:h5"
     >
       {t(title)}
     </LinkScroll>
@@ -63,7 +63,7 @@ const Header = () => {
     <header
       className={clsx(
         "fixed top-0 start-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
-        hasScrolled && "py-2 dark:text-white bg-white dark:bg-gray-900 backdrop-blur-[8px]"
+        hasScrolled && "py-2 dark:text-white bg-white dark:bg-black backdrop-blur-[8px]"
       )}
       // style={{
       //   width: "100%",
@@ -74,7 +74,7 @@ const Header = () => {
       <div className="container flex h-14 items-center max-lg:px-5">
         <a className="lg:hidden flex-1 cursor-pointer z-2">
           <img
-            src="/PNG/small_logo.png"
+            src="/images/small_logo.png"
             width={54}
             // height={55}
             alt="logo"
@@ -90,17 +90,10 @@ const Header = () => {
         >
           <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-before max-md:px-4">
             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
-              <ul className="flex max-lg:block max-lg:px-12">
-                <li className="nav-li">
-                  <NavLink title="About" />
-                  <NavLink title="Features" />
-                  <NavLink title="Academy" />
-                  <NavLink title="FAQ" />
-                </li>
-
-                <li className="nav-logo">
-                  <LinkScroll
-                    to="hero"
+              <ul className="flex max-lg:block justify-between max-lg:px-12">
+              <li className="nav-li">
+                  <Link
+                    to="/"
                     offset={-250}
                     spy
                     smooth
@@ -111,21 +104,29 @@ const Header = () => {
                     <img
                       src={
                         isDarkMode
-                          ? "/PNG/logo_dark.png"
-                          : "/PNG/logo_light.png"
+                          ? "/images/logo_dark.png"
+                          : "/images/logo_light.png"
                       }
-                      className={isDarkMode ? "w-[16rem]" : "w-[24rem]"}
+                      className={ "w-[14rem]"}
                       alt="logo"
                     />
-                  </LinkScroll>
+                  </Link>
+
+                  <NavLink title="About" />
+                  <NavLink title="Features" />
+                  <NavLink title="Academy" />
+                  <NavLink title="FAQ" />
                 </li>
+          
+
+            
 
                 <li className="nav-li">
                   <LanguageSwitcher />
                   <button
                     onClick={toggleDarkMode}
                     type="button"
-                    className="text-black dark:text-white  dark:bg-white-700 dark:hover:bg-white-800 bg-black-700 hover:bg-black-800  font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center me-2"
+                    className="text-black dark:text-white  dark:bg-white-700 dark:hover:bg-white-800 bg-black-700 hover:bg-black-800  font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center "
                   >
                     {isDarkMode ? <IconBrightnessDown /> : <IconMoonStars />}
                   </button>

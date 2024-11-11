@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div className="my-40 overflow-hidden">
+      <div className="my-20  md:my-45 overflow-hidden px-8 min-h-screen">
       <Outlet />
 
       </div>

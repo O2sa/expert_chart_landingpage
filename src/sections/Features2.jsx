@@ -20,23 +20,30 @@ import { IconShoppingBag } from "@tabler/icons-react";
 import { IconBrandStocktwits } from "@tabler/icons-react";
 import { IconChartArea } from "@tabler/icons-react";
 import { Element } from "react-scroll";
+import { IconTableOptions } from "@tabler/icons-react";
+import { IconBuilding } from "@tabler/icons-react";
+import { IconShoe } from "@tabler/icons-react";
+import { IconCoinBitcoinFilled } from "@tabler/icons-react";
+import { IconCoinEuroFilled } from "@tabler/icons-react";
+import { IconCoinTakaFilled } from "@tabler/icons-react";
 
 export default function FeaturesSection() {
   const { t } = useTranslation();
 
   const items = [
     {
-      title: t("sections.cryptocurrencies.header_section_one"),
+      title: t("sections.options.header_section_one"),
       description: (
         <span className="text-sm">
           {t(
-            "We provide advanced analytical tools to help you understand and analyze the performance of various cryptocurrencies."
+            "Customized recommendations and strategies for options trading, including various buying and selling strategies."
           )}
         </span>
       ),
-      header: <SkeletonOne />,
+      header: <CardComponentSkeleton type="options" />,
+
       className: "md:col-span-1",
-      icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+      icon: <IconTableOptions className="h-4 w-4 text-neutral-500" />,
     },
     {
       title: t("sections.Investment.header_section_one"),
@@ -49,27 +56,28 @@ export default function FeaturesSection() {
       ),
       header: <SkeletonTwo />,
       className: "md:col-span-1",
-      icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+      icon: <IconZoomMoney className="h-4 w-4 text-neutral-500" />,
     },
+
     {
-      title: t("sections.options.header_section_one"),
+      title: t("sections.cryptocurrencies.header_section_one"),
       description: (
         <span className="text-sm">
           {t(
-            "Customized recommendations and strategies for options trading, including various buying and selling strategies."
+            "We provide advanced analytical tools to help you understand and analyze the performance of various cryptocurrencies."
           )}
         </span>
       ),
-      header: <SkeletonThree />,
+      header: <SkeletonOne />,
       className: "md:col-span-1",
-      icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+      icon: <IconCoinBitcoin className="h-4 w-4 text-neutral-500" />,
     },
     {
-      title: t("sections.financial_markets.header_section_one"),
+      title: t("sections.company.header_section_one"),
       description: <span className="text-sm"></span>,
       header: <SkeletonFour />,
       className: "md:col-span-2",
-      icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+      icon: <IconBuilding className="h-4 w-4 text-neutral-500" />,
     },
 
     {
@@ -81,33 +89,33 @@ export default function FeaturesSection() {
           )}
         </span>
       ),
-      header: <CardComponentSkeleton />,
+      header: <CardComponentSkeleton  />,
       className: "md:col-span-1",
-      icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+      icon: <IconShoe className="h-4 w-4 text-neutral-500" />,
     },
   ];
 
   return (
-    <Element name="Features" className="relative">
-
-    <Section>
-      <SectionHeader
-        title={t("sections.about.header_section_one")}
-        desc={t("sections.discover.paragraph")}
-      />
-      <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            className={cn("[&>p:text-lg]", item.className)}
-            icon={item.icon}
-          />
-        ))}
-      </BentoGrid>{" "}
-    </Section>
+    <Element name="Features">
+      <Section>
+        {/* <SectionHeader
+          title={t("sections.about.header_section_one")}
+          desc={t("sections.discover.paragraph")}
+        /> */}
+        <div className="mt-10"/>
+        <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              className={cn("[&>p:text-lg]", item.className)}
+              icon={item.icon}
+            />
+          ))}
+        </BentoGrid>{" "}
+      </Section>
     </Element>
   );
 }
@@ -148,22 +156,22 @@ const SkeletonOne = () => {
         variants={variants}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+          <IconCoinBitcoinFilled className="h-6 w-6 rounded-full text-p2 flex-shrink-0" />
+          <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
       </motion.div>
       <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
         <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+          <IconCoinEuroFilled className="h-6 w-6 rounded-full text-p2 flex-shrink-0" />
       </motion.div>
       <motion.div
         variants={variants}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-white dark:bg-black"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-        <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
+          <IconCoinTakaFilled className="h-6 w-6 rounded-full text-p2 flex-shrink-0" />
+          <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
       </motion.div>
     </motion.div>
   );
@@ -186,7 +194,7 @@ const SkeletonTwo = () => {
       },
     },
   };
-  const arr = new Array(6).fill(0);
+  const arr = new Array(4).fill(0);
   return (
     <motion.div
       initial="initial"
@@ -236,7 +244,7 @@ const SkeletonThree = () => {
     // >
     <motion.div className="h-full w-full rounded-lg">
       <div className=" flex  justify-center ">
-        <img src="./money.jpg" className="w-[200px]" />
+        <img src="./stock.jpg" className="w-[200px]" />
       </div>
     </motion.div>
     // </motion.div>
@@ -244,90 +252,22 @@ const SkeletonThree = () => {
 };
 const SkeletonFour = () => {
   const { t } = useTranslation();
-  const first = {
-    initial: {
-      x: 20,
-      rotate: -5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
-    },
-  };
-  const second = {
-    initial: {
-      x: -20,
-      rotate: 5,
-    },
-    hover: {
-      x: 0,
-      rotate: 0,
-    },
-  };
+
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
-    >
-      <motion.div
-        variants={first}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
-      >
-        <IconChartArea
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10 text-p2"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          {t(sections_features.financial_markets[0].header)}
-        </p>
-      </motion.div>
-      <motion.div
-        variants={second}
-        className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
-      >
-        <IconZoomMoney
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10 text-p2"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          {t(sections_features.financial_markets[1].header)}
-        </p>
-      </motion.div>
-      <motion.div
-        variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
-      >
-        <IconShoppingBag
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10 text-p2"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          {t(sections_features.financial_markets[2].header)}
-        </p>
-      </motion.div>{" "}
-      <motion.div
-        variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
-      >
-        <IconCoinBitcoin
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10 text-p2"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          {t(sections_features.financial_markets[3].header)}
-        </p>
-      </motion.div>
-    </motion.div>
+    <div className="flex items-center justify-center gap-4 flex-wrap h-full w-full">
+      {/* <div className="grid grid-cols-3 gap-3 justify-center "> */}
+      {sections_features.company.map((val, idx) => (
+        <div key={idx} className="text-center">
+          <div className="flex justify-center items-center mb-2 w-16 h-16  bg-blue-100  dark:bg-blue-900">
+            <val.icon className=" text-blue-600 w-8 h-8 dark:text-blue-300" />
+          </div>
+          <h3 className="mb-2 text-xl  text-black dark:text-white">
+            {t(val.header)}
+          </h3>
+        </div>
+      ))}
+      {/* </div> */}
+    </div>
   );
 };
 const SkeletonFive = () => {

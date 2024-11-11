@@ -314,3 +314,8 @@
 
   /*  END of Footer*/
 }
+
+
+.tv-ticker-item-tape__short-name-wrapper{
+  @apply text-black dark:text-white 
+}

@@ -35,14 +35,17 @@ const Footer = () => {
       icon: <IconBrandTelegram />,
     },
   ];
+
+
+  
   return (
-    <footer className="text-black dark:text-white bg-white dark:bg-gray-900">
+    <footer className="text-black dark:text-white bg-white dark:bg-black text-center md:text-start ">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
-          <div className="mb-6  flex flex-col md:mb-0">
-            <a href="" className="flex items-center">
+          <div className="mb-6  flex flex-col md:mb-0 justify-center items-cente md:items-start">
+            <a href="" className="flex justify-center">
               <img
-                src="/PNG/small_logo.png"
+                src="/images/small_logo.png"
                 className="h-8 me-3"
                 alt="FlowBite Logo"
               />
@@ -65,9 +68,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-6 flex-wrap ">
+          <div className="flex gap-6 flex-wrap justify-center ">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 {t("Contacts")}
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -122,12 +125,12 @@ const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © {` ${new Date().getFullYear()} `}
-            <a href="https://chartxpert.io//" className="hover:underline">
+            <a href="" className="hover:underline">
               ChartExpert
             </a>
             {` ${t("All Rights Reserved.")}`}
           </span>
-          <div className="flex mt-4 sm:justify-center sm:mt-0 gap-2">
+          <div className="flex mt-4 justify-center sm:mt-0 gap-2">
             {social.map((val, idx) => (
               <a
                 href={val.link}
@@ -160,7 +163,7 @@ import { IconBrandTelegram } from "@tabler/icons-react";
 export function SparklesPreview() {
   return (
     <div className="h-[20rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center bg-gradient-to-b from-white via-slate-100 dark:from-black dark:via-slate-700 to-blue-500 bg-clip-text text-transparent relative z-20">
+      <h1 className="text-6xl lg:text-9xl font-bold text-center bg-gradient-to-b from-white via-slate-100 dark:from-black dark:via-slate-700 to-blue-500 bg-clip-text text-transparent relative z-20">
         ChartExpert
       </h1>
     </div>

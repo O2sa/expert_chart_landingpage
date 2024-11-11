@@ -1,14 +1,29 @@
-
 import React from "react";
 import { InfiniteMovingCards } from "../components/ui/infinite-moving-cards";
 import { sections_features } from "../data/index";
+import { IconBrandReact } from "@tabler/icons-react";
+import TradingView from "../components/TradingView";
 
 export default function Testimonials() {
+  const items = [
+
+    <IconBrandReact />,
+    <IconBrandReact />,
+    <IconBrandReact />,
+    <IconBrandReact />,
+    <IconBrandReact />,
+    <IconBrandReact />,
+   
+  ];
   return (
-    (<div
-      className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards items={testimonials} direction="right" speed="slow" />
-    </div>)
+    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <InfiniteMovingCards
+        items={items}
+        direction="right"
+        speed="slow"
+      />
+      <TradingView/>
+    </div>
   );
 }
 

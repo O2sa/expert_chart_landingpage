@@ -2,6 +2,7 @@ import { Element } from "react-scroll";
 import { sections_features } from "../data/index";
 import FaqItem from "../components/FaqItem";
 import { useTranslation } from "react-i18next";
+import SectionHeader from "../components/SectionHeader";
 
 const Faq = () => {
   const halfLength = Math.floor(sections_features.questions.length / 2);
@@ -9,13 +10,16 @@ const Faq = () => {
 
   return (
     <section>
-      <Element name="FAQ" className="relative">
+      <Element name="FAQ" >
    
-
+      <SectionHeader
+          title={t("sections.questions.header_section_one")}
+          // desc={t("sections.questions.paragraph")}
+        />
         <div className=" relative z-2   ">
-          <div className="container flex gap-10 max-lg:block">
+          <div className=" flex gap-10 max-lg:block">
         
-            <div className="relative flex-1 pt-24">
+            <div className="relative flex-1 pt-10">
               {sections_features.questions.slice(0, halfLength).map((item, index) => (
                 <FaqItem key={index} question={t(item.header)}answer={t(item.desc)} index={halfLength + index} />
               ))}

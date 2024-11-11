@@ -13,11 +13,12 @@ const Landingpage = () => {
   return (
     <div >
       <Hero />
+      <Markets />
+
       <About />
+
       <FeaturesSection />
-      {/* <Markets /> */}
       <Features />
-      {/* <MovingCards /> */}
       <Start />
       <Faq />
     </div>

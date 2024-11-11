@@ -16,6 +16,17 @@
     "New password": "New password",
     "old password": "old password",
     "Repeat password": "Repeat password",
+
+    "seo": {
+        "title": "ChartXpert.io",
+        "twitterTitle": "ChartXpert.io",
+        "description": "An advanced platform for market analysis, offering technical and fundamental analysis tools for stocks, currencies, commodities, and cryptocurrencies. Join an active community of traders and investors and benefit from live data to achieve your trading success.",
+        "keywords": "market analysis, technical and fundamental analysis tools for stocks, analysis, trading",
+        "ogTitle": "ChartXpert.io",
+        "ogDescription": "An advanced platform for market analysis, offering technical and fundamental analysis tools for stocks, currencies, commodities, and cryptocurrencies. Join an active community of traders and investors and benefit from live data to achieve your trading success.",
+        "twitterDescription": "An advanced platform for market analysis, offering technical and fundamental analysis tools for stocks, currencies, commodities, and cryptocurrencies. Join an active community of traders and investors and benefit from live data to achieve your trading success."
+
+    },
     "Save time and effort by using advanced technical and fundamental analysis tools to track stocks, currencies, commodities, and cryptocurrencies. Join an active community of traders and investors and start your successful trading journey.": "Save time and effort by using advanced technical and fundamental analysis tools to track stocks, currencies, commodities, and cryptocurrencies. Join an active community of traders and investors and start your successful trading journey.",
     "sections": {
         "about": {
@@ -86,7 +97,7 @@
         },
         "questions": {
             "button": "",
-            "header_section_one": "Frequently Asked ",
+            "header_section_one": "Frequently Asked Questions",
             "header_section_two": "Questions",
             "paragraph": "",
             "title": "Support and Help"
@@ -99,15 +110,7 @@
             "title": ""
         }
     },
-    "seo": {
-        "description": "Surf Logistics Inc. offers fast, flexible, and reliable B2B freight transportation services across North America. No long-term contracts, just seamless logistics.",
-        "keywords": "B2B freight, logistics, transportation, freight shipping, North America, flexible shipping",
-        "ogDescription": "Fast and reliable freight transportation across North America.",
-        "ogTitle": "Surf Logistics Inc. | B2B Freight Transportation",
-        "title": "Surf Logistics Inc",
-        "twitterDescription": "Reliable and fast freight services across North America.",
-        "twitterTitle": "Surf Logistics Inc. | B2B Freight Transportation"
-    },
+
     "Submit": "Submit",
     "Suceess!": "Suceess!",
     "Track Financial Market Performance Easily with ": "Track Financial Market Performance Easily with ",

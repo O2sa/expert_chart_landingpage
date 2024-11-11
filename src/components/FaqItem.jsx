@@ -10,7 +10,7 @@ const FaqItem = ({ index,question='',answer }) => {
   return (
     <div className="relative z-2 mb-16">
       <div
-        className="group relative flex cursor-pointer items-center justify-between gap-10 px-7"
+        className="group relative flex cursor-pointer items-center justify-between gap-8 px-4"
         onClick={() => {
           setActiveId(activeId === index ? null : index);
         }}
@@ -33,7 +33,7 @@ const FaqItem = ({ index,question='',answer }) => {
         <div
           className={clsx(
             "faq-icon relative flex size-12 items-center justify-center rounded-full border-2 border-s2 shadow-400 transition-all duration-500 group-hover:border-s4",
-            active && "before:bg-white after:rotate-0 after:bg-p1",
+            active && "before:bg-white after:rotate-0 after:bg-white",
           )}
         >
           <div className="g4 size-11/12 rounded-full shadow-300" />
