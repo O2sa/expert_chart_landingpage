@@ -1,146 +1,83 @@
-# expert_chart_landingpage
-
-الأقسام : الرئيسية , الأسواق , المميزات , الاكاديمية , تواصل معنا 
-
-القسم الأول : 
-تابع أداء السوق المالي بسهولة مع ChartXpert.io
-وفر الوقت والجهد باستخدام أدوات التحليل الفني والأساسي المتقدمة لتتبع الأسهم والعملات والسلع والعملات الرقمية. انضم إلى مجتمع نشط من المتداولين والمستثمرين وابدأ رحلة التداول الناجحة الخاصة بك.
- 
-مع صورة داش بورد مرفقة باسم Dashboard
-
-القسم الثاني :
-الأسواق المالية
-استكشاف أنواع الأسواق المالية
-وضع ايقونة واسم لكل سوق بشكل احترافي 
-
-القسم الثالث :
-المميزات :
-نحن نقدم مجموعة واسعة من الخدمات لدعم تداولك، بما في ذلك التحليل الفني المتقدم، بيانات السوق المباشرة، الاستراتيجيات، وأدوات تخصيص الرسوم البيانية. انضم إلينا الآن وابدأ في تعزيز تجربتك في السوق المالي.
-الاستعانة بالموقع الرسمي لاختصار المميزات على شكل عناوين رئيسية وايقونات 
-
-القسم الرابع :
-الاكاديمية 
-تعلم مع ChartXpert.io
-
-القسم الخامس :
-اكثر الأسئلة شيوعا
-
-الفوتر :
-كماهو موجود في الموقع الرسمي
+# Setup Guides
+This the guides step by step to run the ChartExpert website.
 
 
+**Prerequisites:**
 
----------------
-## project description 
+1.  **Node.js and npm (or yarn)**
 
-أنا بحاجة إلى مستقل متميز ومتخصص في تصميم وتطوير صفحات الهبوط لبناء صفحة هبوط احترافية ،
+----
+\
+ **Open a terminal or command prompt and navigate to the root directory of the project using `cd`**
 
-عدد الصفحات ( 7 صفحات ) ويشمل التالي :
 
-* الصفحة الرئيسية
+## Installing Website Dependencies and Building the Project
 
-* صفحة التسجيل للمستخدم
+**1. Integrating Tawk.to Live Chat with Your Website (Including Multiple Languages)**
 
-* صفحة الدخول للمستخدم
+**This guide walks you through integrating Tawk.to live chat with your website, supporting multiple languages with separate widget IDs.**
 
-* صفحة التواصل
+**Prerequisites:**
 
-* صفحة الشروط والاحكام
+- A Tawk.to account (free tier available).
 
-* صفحة إخلاء المسؤولية
+**Steps:**
 
-* صفحة من نحن
+**1. Create a Tawk.to Account and Property:**
 
-متطلبات المشروع:
+1. Visit [https://www.tawk.to/](https://www.tawk.to/) and create a free Tawk.to account.
+2. Follow the steps to create a new property for your website.
+3. Make note of the **Property ID** displayed in the dashboard. You'll need it later.
 
-- تصميم واجهة احترافية: تصميم جذاب يتماشى مع الهوية، مع اعتماد ألوان متناسقة ومناسبة لمجال التقنية المالية (يرجى استخدام الألوان الرسمية المحددة).
+**2. Add Multiple Language Widget IDs:**
 
-- هيكل منظم للصفحة: يشمل أقساماً واضحة مثل:
+1. Within your Tawk.to property dashboard, navigate to the **"Settings"** section.
+2. Go to the **"Chat Widgets"** tab.
+3. Here, you'll see the default widget ID for your property. This will be used for the main language on your website.
+4. To add a widget for another language, click on **"Add Widget"**.
+5. Customize the widget settings for the specific language. For example, you could configure the widget language and pre-defined messages.
+6. Once finished, note down the unique **Widget ID** for this language. Repeat this process for additional languages you want to support.
 
-* مقدمة تعريفية عن المنصة
+**3. Set Up Environment Variables:**
 
-* عرض لأبرز المزايا والأدوات المتوفرة
+- Inside the `.env` file, edit the following lines, replacing placeholders with your actual values:
 
-* قسم للشهادات من المستخدمين
+  ```
+  VITE_APP_TAWK_PROPERTY_ID=YOUR_PROPERTY_ID          # Replace with PROPERTY ID
+  VITE_APP_TAWK_EN_WIDGET_ID=YOUR_ENGLISH_WIDGET_ID  # Replace with English widget ID
+  VITE_APP_TAWK_AR_WIDGET_ID=YOUR_FRENCH_WIDGET_ID   # Replace with Arabic widget ID
+  ```
 
-* معلومات حول خطط الاشتراك المتاحة
+- Do not forget to save the file
 
-* دعوة لاتخاذ إجراء مثل التسجيل أو طلب الاشتراك
+**4. Add google analytics and facebook pexiel:**
+- Inside the `.env` file, edit the following lines, replacing placeholders with your actual values:
 
-- تحسين تجربة المستخدم: التأكد من أن الصفحة متجاوبة وسهلة الاستخدام على جميع الأجهزة، بما في ذلك الهواتف المحمولة.
+  ```
+  VITE_FB_PIXEL_ID=YOUR_FACEBOOK_BIXEL_ID          # Replace with facebook ID
+  VITE_GA_MEASUREMENT_ID=YOUR_GOOGLE_ID            # Replace with google analytics ID
+  ```
 
-- سرعة التحميل: تحسين سرعة تحميل الصفحة لتقديم أفضل تجربة للمستخدمين.
+- Do not forget to save the file
 
-- الربط مع Google Analytics و Facebook Pixel لتمكين تتبع الأداء وجمع البيانات.
+**5. Install Client Dependencies and Build the Website:**
 
-- نماذج اتصال: إضافة نموذج للتواصل مع فريق الدعم، وكذلك نموذج التسجيل أو الاشتراك.
-
-- الميزات المرغوبة:
-
-خبرة سابقة في بناء صفحات الهبوط خصوصاً للمشاريع التقنية أو المالية.
-
-معرض أعمال يحتوي على أمثلة لصفحات هبوط سابقة تم تصميمها وتطويرها.
-
-مهارات في تحسين محركات البحث (SEO) لضمان ظهور الصفحة في نتائج البحث.
-
-مهارة في البرمجة باستخدام HTML/CSS وJavaScript، مع إمكانية العمل باستخدام مكتبات مثل Bootstrap.
-
-- متطلبات إضافية:
-
-* ملف تصميم نهائي بصيغة Figma أو Adobe XD (في حال كان التصميم مخصصاً).
-
-* تنفيذ برمجي نظيف، يمكن لاحقاً التعديل عليه بسهولة من قبل فريق التطوير الداخلي.
-
-ملاحظات إضافية:
-
-يرجى إرفاق نماذج الأعمال السابقة ذات الصلة، وذكر الخبرات الخاصة بتطوير وتصميم صفحات لمشاريع تقنية أو مالية.
+- Navigate to the root folder.
+- Run the following command in your terminal:
+  ```bash
+  npm install && npm run build
+  ```
+  This will install all the necessary dependencies for your React application and create an optimized production-ready build of your React application in the `dist` folder.
 
 
 
+**Choose a Hosting Provider:**
+- To host the website you can choose any hosting provider can running Nodejs apps, like:
+    1. Netlify
+    2. Render
+    3. Heroku
+    4. Hostinger (VPS)
+    5. Vercel
+    
 
 
-
-
-
-
-
-
-الأقسام : الرئيسية , الأسواق , المميزات , الاكاديمية , تواصل معنا 
-
-القسم الأول : 
-تابع أداء السوق المالي بسهولة مع ChartXpert.io
-وفر الوقت والجهد باستخدام أدوات التحليل الفني والأساسي المتقدمة لتتبع الأسهم والعملات والسلع والعملات الرقمية. انضم إلى مجتمع نشط من المتداولين والمستثمرين وابدأ رحلة التداول الناجحة الخاصة بك.
-مع صورة داش بورد مرفقة باسم Dashboard
-
-القسم الثاني :
-الأسواق المالية
-تحت مظلة واحدة : الأسهم , الاوبشن , الصناديق , الفوركس , العملات الرقمية
-القسم الثالث :
-المميزات :
-  تحليل شامل ومتعدد الأسواق: تقدم تشارت إكسبرت تحليلات فنية وأساسية تشمل الأسهم، العملات، الصناديق الاستثمارية، الأوبشن، والعملات الرقمية، مما يتيح للمستخدمين متابعة جميع الأسواق المالية في مكان واحد.
-  بيانات حية ودقيقة: توفر المنصة بيانات أسعار حية ودقيقة لجميع الأسواق المالية، بما في ذلك العملات والأسهم والعملات الرقمية، مع تحديثات مستمرة للمؤشرات العالمية.
-  أدوات متقدمة للرسم البياني: يمكن للمستخدمين الاستفادة من أدوات تحليل قوية تساعدهم على دراسة الاتجاهات، تحديد النقاط الهامة، ورصد الإشارات بدقة لكل أنواع الأصول.
-  تخصيص واجهة المستخدم: تسمح للمستخدم بتخصيص الشاشات والمخططات وفقاً لاهتماماته، سواء كان التركيز على الأسهم أو العملات أو الأوبشن أو غيرها، للحصول على تجربة ملائمة ومرنة.
-  التعليم والتدريب: تشمل المنصة موارد تعليمية مصممة لتعريف المستخدمين بأساسيات كل سوق، وتطوير مهاراتهم في تحليل الأسواق وتداول الأصول المختلفة.
-  إشعارات وتنبيهات ذكية: تنبه المستخدم فور حدوث تغيرات هامة في الأسواق، مثل تقلبات الأسعار الكبيرة أو ظهور فرص استثمارية، لضمان عدم تفويت أي فرصة.
-  مجتمع نشط وتفاعلي: توفر المنصة مجتمعًا يمكن من خلاله للمستخدمين تبادل الأفكار، استراتيجيات التداول، والتوقعات مع المتداولين والمستثمرين الآخرين، مما يعزز الخبرة الجماعية.
-  أبحاث وتقارير محدثة: تقدم تقارير دورية وتحليلات متعمقة لمساعدة المستخدمين على فهم الأسواق بشكل أعمق واتخاذ قرارات استثمارية أفضل.
-  التداول التجريبي: توفر بيئة تداول افتراضية يمكن للمستخدمين من خلالها تجربة استراتيجياتهم وتطبيقها قبل التداول الفعلي.
-
-القسم الرابع :
-اكاديمية تشارت إكسبرت – كل ما تحتاجه لتصبح خبيراً في الأسواق المالية
-انطلق معنا نحو احتراف الأسواق المالية من خلال مجموعة متكاملة من البرامج التعليمية المصممة بعناية لتناسب جميع المستويات:
-    • الدورات التدريبية الأساسية: ابدأ برحلتك من الأساسيات مع دورات تفصيلية حول التحليل الفني والأساسي.
-    • ورش العمل التفاعلية: احضر جلسات مباشرة مع الخبراء حيث يمكنك التفاعل وطرح الأسئلة وتعلم المهارات العملية.
-    • فيديوهات التعليم الذاتي: تابع مكتبة الفيديوهات المسجلة واستعرضها في أي وقت، وتعلم استراتيجيات التداول والتحليل.
-    • محاكاة التداول: جرب استراتيجياتك في بيئة محاكاة بدون مخاطر من خلال حسابات افتراضية للتدرب على التداول.
-    • التدريب الفردي: استفد من جلسات mentorship خاصة مع خبراء يقدمون إرشادات موجهة لتطوير مهاراتك.
-    • المقالات والبحوث المتخصصة: ابقَ على اطلاع عبر مقالات ودراسات متعمقة حول أحدث اتجاهات السوق والتقنيات.
-    • شهادات معتمدة: انضم إلى برامج مكثفة واحصل على شهادات تؤهلك للعمل بثقة واحترافية في الأسواق المالية.
-تعلم بمرونة وابدأ رحلتك نحو الاحتراف الآن مع محتوى متنوع يغطي كل جوانب الأسواق المالية، ويساعدك على بناء مهاراتك وتحقيق أهدافك الاستثمارية.
-
-القسم الخامس :
-اكثر الأسئلة شيوعا – الرجوع للموقع الرسمي
-
-الفوتر :
-كماهو موجود في الموقع الرسمي

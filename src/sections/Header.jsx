@@ -95,8 +95,7 @@ const Header = () => {
                   <Link
                     to="/"
                     offset={-250}
-                    spy
-                    smooth
+                  
                     className={clsx(
                       "max-lg:hidden transition-transform duration-500 cursor-pointer"
                     )}

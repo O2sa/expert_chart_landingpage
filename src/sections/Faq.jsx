@@ -25,7 +25,7 @@ const Faq = () => {
               ))}
             </div>
 
-            <div className="relative flex-1 lg:pt-24">
+            <div className="relative flex-1 pt-10">
               {sections_features.questions.slice(halfLength).map((item, index) => (
                 <FaqItem key={index} question={t(item.header)}answer={t(item.desc)} index={halfLength + index} />
               ))}

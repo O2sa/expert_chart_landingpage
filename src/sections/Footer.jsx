@@ -88,7 +88,7 @@ const Footer = () => {
                 </li>{" "}
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="#"
                     className="hover:underline"
                   >
                     {t("Newark, zip code 19713,Delaware, U.S")}

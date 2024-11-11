@@ -12,15 +12,18 @@ function LiveChat() {
   useEffect(() => {
     // Initialize the chat widget
     ChatWidgetController.init(language);
+
+    
   }, []);
-
-
 }
+
+
+
 export const ChatWidgetController = (() => {
   // Initialize Tawk.to
   const init = (language) => {
     window.Tawk_API = window.Tawk_API || {};
-    window.Tawk_API.autoStart = false; // Disable auto-start
+    window.Tawk_API.autoStart = true; // Disable auto-start
 
     // Load Tawk.to script
     const script = document.createElement("script");
