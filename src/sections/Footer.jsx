@@ -1,4 +1,5 @@
 const Footer = () => {
+  const { t } = useTranslation();
   const payments = [
     "google_pay.svg",
     "mada_pay.png",
@@ -36,8 +37,6 @@ const Footer = () => {
     },
   ];
 
-
-  
   return (
     <footer className="text-black dark:text-white bg-white dark:bg-black text-center md:text-start ">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -159,6 +158,7 @@ import { IconBrandTiktok } from "@tabler/icons-react";
 import { IconBrandLinkedin } from "@tabler/icons-react";
 import { IconBrandSnapchat } from "@tabler/icons-react";
 import { IconBrandTelegram } from "@tabler/icons-react";
+import { useTranslation } from "react-i18next";
 
 export function SparklesPreview() {
   return (

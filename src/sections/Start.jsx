@@ -1,6 +1,5 @@
 import { t } from "i18next";
-import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
-import { sections_features } from "../data/index";
+
 import { useTranslation } from "react-i18next";
 
 export default function Start() {

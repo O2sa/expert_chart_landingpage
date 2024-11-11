@@ -3,15 +3,11 @@ import { cn } from "../lib/utils";
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import { useTranslation } from "react-i18next";
 import { sections_features } from "../data/index";
 import SectionHeader from "../components/SectionHeader";
 import Section from "../components/Section";
 import { Element } from "react-scroll";
-import Testimonials from "./Testimonials";
-import { InfiniteMovingCardsAlt } from "../components/ui/infinite-moving-cards";
-import TradingView from "../components/TradingView";
 
 export default function About() {
   const { t } = useTranslation();

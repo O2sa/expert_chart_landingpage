@@ -1,5 +1,4 @@
-import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-with-collision";
-import { Cover } from "../components/ui/cover";
+
 import { BackgroundLines } from "../components/ui/background-lines";
 import { useTranslation } from "react-i18next";
 import { Compare } from "../components/ui/compare";

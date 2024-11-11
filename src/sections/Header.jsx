@@ -121,7 +121,7 @@ const Header = () => {
 
             
 
-                <li className="nav-li">
+                <li className="nav-li flex-row">
                   <LanguageSwitcher />
                   <button
                     onClick={toggleDarkMode}

@@ -1,11 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { sections_features } from "../data/index";
 import SectionHeader from "../components/SectionHeader";
 import { HoverEffect } from "../components/ui/card-hover-effect";
-import { motion } from "framer-motion";
-import { IconChartArea } from "@tabler/icons-react";
-import { IconBrandStocktwits } from "@tabler/icons-react";
-import { IconArrowAutofitContent } from "@tabler/icons-react";
+
 import { IconChartBar } from "@tabler/icons-react";
 import { IconCoins } from "@tabler/icons-react";
 import { IconShoppingBagPlus } from "@tabler/icons-react";

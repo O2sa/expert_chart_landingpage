@@ -2,13 +2,7 @@ import { cn } from "../lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "../components/ui/bento-grid";
 import { sections_features } from "../data";
-import {
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
+
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import CardComponent, { CardComponentSkeleton } from "../components/ui/Card";
@@ -16,9 +10,7 @@ import SectionHeader from "../components/SectionHeader";
 import Section from "../components/Section";
 import { IconCoinBitcoin } from "@tabler/icons-react";
 import { IconZoomMoney } from "@tabler/icons-react";
-import { IconShoppingBag } from "@tabler/icons-react";
-import { IconBrandStocktwits } from "@tabler/icons-react";
-import { IconChartArea } from "@tabler/icons-react";
+
 import { Element } from "react-scroll";
 import { IconTableOptions } from "@tabler/icons-react";
 import { IconBuilding } from "@tabler/icons-react";
