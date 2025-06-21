@@ -7,7 +7,7 @@ This the guides step by step to run the ChartExpert website.
 
 **Prerequisites:**
 
-1.  **Node.js and pnpm**
+-  **Node.js and pnpm**
 
 ----
 
