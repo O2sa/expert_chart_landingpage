@@ -1,4 +1,5 @@
 # ChartXpert.io 
+[![Preview](Caver.png)](https://expertchart.netlify.app/)
 A landing page built with nextjs, react, threejs, and Aceternity UI with localization for Arabic and english languages.
 
 ## Setup Guides
