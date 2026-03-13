@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  Built with <strong>Next.js, React, Three.js, and Aceternity UI</strong>, featuring stunning 3D animations and seamless Arabic & English localization.
+  Built with <strong>React, Three.js, and Aceternity UI</strong>, featuring stunning 3D animations and seamless Arabic & English localization.
 </p>
 
 ## ✨ Overview
@@ -21,7 +21,6 @@
 
 This project is built with a powerful and modern tech stack:
 
-*   **Framework:** [Next.js](https://nextjs.org/) (utilizing both Pages and App Router concepts).
 *   **Core Libraries:** [React](https://react.dev/) (inferred from project structure).
 *   **3D Graphics:** [Three.js](https://threejs.org/) for immersive web-based 3D animations.
 *   **Styling & UI:** [Tailwind CSS](https://tailwindcss.com/) & [Aceternity UI](https://ui.aceternity.com/) for beautiful, customizable components.
