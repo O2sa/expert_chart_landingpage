@@ -6,6 +6,11 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind" />
+
+  <br />
   <strong>🚀 A modern, bilingual landing page for a financial charting SaaS platform.</strong>
 </p>
 
