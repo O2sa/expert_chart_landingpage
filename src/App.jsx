@@ -1,18 +1,11 @@
 import Home from "./pages/Home";
-import React, { createContext, Suspense, useContext } from "react";
+import { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Loader from "./components/Loader";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Landingpage from "./pages/landingpage";
 import Privacy from "./pages/privacy";
-import { useEffect } from "react";
-import {
-  initializeFacebookPixel,
-  initializeGoogleAnalytics,
-  trackPageView,
-} from "./utils/analtics";
-import LiveChat from "./components/LiveChat";
 import { useTranslation } from "react-i18next";
 
 const App = () => {
@@ -23,7 +16,6 @@ const App = () => {
   } = useTranslation();
 
   useEffect(() => {
-    // Create a script element
     const tawk = document.createElement("script");
     tawk.src = `https://embed.tawk.to/${
       import.meta.env.VITE_APP_TAWK_PROPERTY_ID
@@ -36,10 +28,8 @@ const App = () => {
     tawk.charset = "UTF-8";
     tawk.setAttribute("crossorigin", "*");
 
-    // Append the script to the body
     document.body.appendChild(tawk);
 
-    // Cleanup function to remove the script when the component unmounts
     return () => {
       document.body.removeChild(tawk);
     };
@@ -58,10 +48,10 @@ const App = () => {
               <Route path="/signup" element={<Signup />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Privacy />} />
-              <Route path="/login" element={<Login />} />{" "}
+              <Route path="/login" element={<Login />} />
             </Route>
           </Routes>
-        </Suspense>{" "}
+        </Suspense>
       </Router>
     </main>
   );

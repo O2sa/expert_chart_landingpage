@@ -1,4 +1,3 @@
-import clsx from "clsx";
 
 const SectionHeader = ({ title, desc }) => {
   return (

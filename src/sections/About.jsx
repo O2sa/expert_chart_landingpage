@@ -1,4 +1,3 @@
-import React from "react";
 import { cn } from "../lib/utils";
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
@@ -104,9 +103,8 @@ const FeatureDescription = ({ children }) => {
 export const SkeletonOne = () => {
   return (
     <div className="relative flex py-8 px-2 gap-10 h-full">
-      <div className="w-full  p-5  mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
-        <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
-          {/* TODO */}
+      <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
+        <div className="flex flex-1 w-full h-full flex-col space-y-2">
           <img
             src="/images/expert.jpg"
             alt="header"
@@ -124,11 +122,9 @@ export const SkeletonOne = () => {
 
 export const SkeletonThree = () => {
   return (
-    <div className="relative flex gap-10  h-full group/image ">
-      <div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full ">
-        <div className="flex flex-1 w-full  flex-col space-y-2  relative">
-          {/* TODO */}
-          {/* <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " /> */}
+    <div className="relative flex gap-10 h-full group/image">
+      <div className="w-full mx-auto bg-transparent dark:bg-transparent group h-full">
+        <div className="flex flex-1 w-full flex-col space-y-2 relative">
           <img
             src="images/trader.jpg"
             alt="header"
@@ -165,7 +161,6 @@ export const SkeletonTwo = () => {
   };
   return (
     <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
-      {/* TODO */}
       <div className="flex flex-row -ml-20">
         {images.map((image, idx) => (
           <motion.div
@@ -246,13 +241,10 @@ export const Globe = ({ className }) => {
       markerColor: [0.1, 0.8, 1],
       glowColor: [1, 1, 1],
       markers: [
-        // longitude latitude
         { location: [37.7595, -122.4367], size: 0.03 },
         { location: [40.7128, -74.006], size: 0.1 },
       ],
       onRender: (state) => {
-        // Called on every animation frame.
-        // `state` will be an empty object, return updated params.
         state.phi = phi;
         phi += 0.01;
       },
@@ -265,9 +257,6 @@ export const Globe = ({ className }) => {
 
   return (
     <div>
-      {/* <div className="w-full relative z-10">
-        <TradingView />
-      </div> */}
       <canvas
         ref={canvasRef}
         style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}

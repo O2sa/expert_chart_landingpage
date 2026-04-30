@@ -1,6 +1,5 @@
 import { cn } from "../../lib/utils";
 import { motion } from "framer-motion";
-import React from "react";
 
 export const BackgroundLines = ({
   children,
@@ -104,7 +103,6 @@ const SVG = ({
           }}
           key={`path-first-${idx}`} />
       ))}
-      {/* duplicate for more paths */}
       {paths.map((path, idx) => (
         <motion.path
           d={path}

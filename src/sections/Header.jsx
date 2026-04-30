@@ -65,18 +65,12 @@ const Header = () => {
         "fixed top-0 start-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
         hasScrolled && "py-2 dark:text-white bg-white dark:bg-black backdrop-blur-[8px]"
       )}
-      // style={{
-      //   width: "100%",
-      //   background: "transparent",
-      //   boxShadow: "rgba(0, 0, 0, 0.1) 0px 0px 0px 0px",
-      // }}
     >
       <div className="container flex h-14 items-center max-lg:px-5">
         <a className="lg:hidden flex-1 cursor-pointer z-2">
           <img
             src="/images/small_logo.png"
             width={54}
-            // height={55}
             alt="logo"
             className=""
           />
@@ -91,11 +85,10 @@ const Header = () => {
           <div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sidebar-before max-md:px-4">
             <nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
               <ul className="flex max-lg:block justify-between max-lg:px-12">
-              <li className="nav-li">
+                <li className="nav-li">
                   <Link
                     to="/"
                     offset={-250}
-                  
                     className={clsx(
                       "max-lg:hidden transition-transform duration-500 cursor-pointer"
                     )}
@@ -106,7 +99,7 @@ const Header = () => {
                           ? "/images/logo_dark.png"
                           : "/images/logo_light.png"
                       }
-                      className={ "w-[14rem]"}
+                      className="w-[14rem]"
                       alt="logo"
                     />
                   </Link>
@@ -116,10 +109,6 @@ const Header = () => {
                   <NavLink title="Academy" />
                   <NavLink title="FAQ" />
                 </li>
-          
-
-            
-
                 <li className="nav-li flex-row">
                   <LanguageSwitcher />
                   <button
@@ -145,22 +134,6 @@ const Header = () => {
               </ul>
             </nav>
 
-            {/* <div className="lg:hidden block absolute top-1/2 start-0 w-[960px] h-[380px] translate-x-[-290px] -translate-y-1/2 rotate-90">
-              <img
-                src="/images/bg-outlines.svg"
-                width={960}
-                height={380}
-                alt="outline"
-                className="relative z-2"
-              />
-              <img
-                src="/images/bg-outlines-fill.png"
-                width={960}
-                height={380}
-                alt="outline"
-                className="absolute inset-0 mix-blend-soft-light opacity-5"
-              />
-            </div> */}
           </div>
         </div>
 
@@ -180,22 +153,3 @@ const Header = () => {
 };
 
 export default Header;
-
-const RightSection = () => {
-  return (
-    <div className="flex space-x-2 items-center">
-      <a
-        className="cursor-pointer relative z-10 bg-transparent hover:bg-gray-100 border border-transparent text-black text-sm md:text-sm transition font-medium duration-200 rounded-full px-4 py-2 flex items-center justify-center dark:text-white dark:hover:bg-neutral-800 dark:hover:shadow-xl"
-        href="/login"
-      >
-        Sign in
-      </a>
-      <a
-        className="cursor-pointer bg-neutral-900 relative z-10 hover:bg-black/90 border border-transparent text-white text-sm md:text-sm transition font-medium duration-200 rounded-full px-4 py-2 flex items-center justify-center shadow-[0px_-1px_0px_0px_#FFFFFF40_inset,_0px_1px_0px_0px_#FFFFFF40_inset]"
-        href="/signup"
-      >
-        Get Started
-      </a>
-    </div>
-  );
-};

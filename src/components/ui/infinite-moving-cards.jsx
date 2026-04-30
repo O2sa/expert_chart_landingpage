@@ -1,6 +1,6 @@
 import { Icon123 } from "@tabler/icons-react";
 import { cn } from "../../lib/utils";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
   items,

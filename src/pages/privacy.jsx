@@ -1,4 +1,3 @@
-import React from "react";
 import { TracingBeam } from "../components/ui/tracing-beam";
 
 export default function Privacy() {

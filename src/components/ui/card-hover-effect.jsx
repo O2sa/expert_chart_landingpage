@@ -39,10 +39,6 @@ export const HoverEffect = ({ items, className }) => {
             )}
           </AnimatePresence>
           <Card>
-            {/* <CardIcon> {item.icon}</CardIcon>
-            <CardTitle>{t(item.header)}</CardTitle>
-            <CardDescription>{t(item.desc)}</CardDescription> */}
-
             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-100 lg:h-12 lg:w-12 dark:bg-blue-900">
               <item.icon
                 className="w-5 h-5 text-blue-600 lg:w-6 lg:h-6 dark:text-blue-300"

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../../lib/utils";
 
@@ -39,7 +39,6 @@ export const FlipWords = ({
         )}
         key={currentWord}>
         
-        {/* Render the whole word without splitting it by letters */}
         <motion.span
           initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}

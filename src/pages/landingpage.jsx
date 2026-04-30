@@ -11,9 +11,7 @@ const Landingpage = () => {
     <div >
       <Hero />
       <Markets />
-
       <About />
-
       <FeaturesSection />
       <Features />
       <Start />

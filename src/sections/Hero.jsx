@@ -1,4 +1,3 @@
-
 import { BackgroundLines } from "../components/ui/background-lines";
 import { useTranslation } from "react-i18next";
 import { Compare } from "../components/ui/compare";
@@ -22,7 +21,6 @@ export default function Hero() {
         <div className="">
           <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl font-sans py-8 relative z-20 font-bold tracking-tight">
             {t("sections.hero.header_section_one")} <br />{" "}
-            {/* {t("sections.hero.header_section_two")} */}
             <div style={{ direction: "rtl" }}>
               <FlipWords className={"dark:text-p2 text-p2 "} words={words} />{" "}
             </div>
@@ -31,7 +29,7 @@ export default function Hero() {
           <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">            {t("sections.hero.paragraph")}
           </p>
 
-          <Link to={'signup'} className="m-10 flex justify-center text-center">
+          <Link to="/signup" className="m-10 flex justify-center text-center">
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
@@ -67,24 +65,3 @@ export default function Hero() {
     </div>
   );
 }
-
-const AceternityLogo = () => {
-  return (
-    <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-3 w-3 text-black dark:text-white"
-    >
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-};

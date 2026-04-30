@@ -10,29 +10,32 @@ const Faq = () => {
 
   return (
     <section>
-      <Element name="FAQ" >
-   
-      <SectionHeader
-          title={t("sections.questions.header_section_one")}
-          // desc={t("sections.questions.paragraph")}
-        />
+      <Element name="FAQ">
+        <SectionHeader title={t("sections.questions.header_section_one")} />
         <div className=" relative z-2   ">
           <div className="container flex gap-10 max-lg:block p-0 m-0 ">
-        
             <div className="relative flex-1 pt-10">
               {sections_features.questions.slice(0, halfLength).map((item, index) => (
-                <FaqItem key={index} question={t(item.header)}answer={t(item.desc)} index={halfLength + index} />
+                <FaqItem
+                  key={index}
+                  question={t(item.header)}
+                  answer={t(item.desc)}
+                  index={halfLength + index}
+                />
               ))}
             </div>
 
             <div className="relative flex-1 pt-10">
               {sections_features.questions.slice(halfLength).map((item, index) => (
-                <FaqItem key={index} question={t(item.header)}answer={t(item.desc)} index={halfLength + index} />
+                <FaqItem
+                  key={index}
+                  question={t(item.header)}
+                  answer={t(item.desc)}
+                  index={halfLength + index}
+                />
               ))}
             </div>
           </div>
-
-          {/* <div className="faq-lin_after absolute start-[calc(50%-1px)] top-0 -z-1 h-full w-0.5 bg-s2 max-lg:hidden" /> */}
         </div>
       </Element>
     </section>
